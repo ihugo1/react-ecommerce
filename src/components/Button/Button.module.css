@@ -1,0 +1,11 @@
+.button{
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-md);
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--white-text-color);
+  border-radius: var(--border-radius);
+}

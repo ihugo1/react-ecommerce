@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Hero/>
-      <FeaturedProducts />
+
     </div>
   )
 }
