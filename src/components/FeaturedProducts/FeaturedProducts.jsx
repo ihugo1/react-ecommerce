@@ -1,4 +1,5 @@
 import styles from "./FeaturedProducts.module.css";
+import background from "./../../assets/images/featuredproducts/background.jpg";
 import { ProductCard } from "../ProductCard/ProductCard";
 import { useProducts } from "../../hooks/useProducts";
 
@@ -13,11 +14,16 @@ export const FeaturedProducts = () => {
 
   return (
     <div className={styles.featuredProducts}>
-      <h2 className={styles.title}>Featured Products</h2>
-      <div className={styles.productsContainer}>
-        {products.map((product) => (
-          <ProductCard product={product} />
-        ))}
+      <div className={styles.background}>
+        <img src={background}/>
+      </div>
+      <div className={styles.content}>
+        <h2 className={styles.title}>Featured Products</h2>
+        <div className={styles.productsContainer}>
+          {products.map((product) => (
+            <ProductCard product={product} />
+          ))}
+        </div>
       </div>
     </div>
   );

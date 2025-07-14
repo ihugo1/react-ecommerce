@@ -4,8 +4,14 @@
   align-items: center;
   gap: var(--spacing-sm);
   font-size: var(--font-md);
-  background-color: var(--accent-color);
-  border: none;
-  color: var(--white-text-color);
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
   border-radius: var(--border-radius);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.button:hover{
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
+  cursor: pointer;
 }

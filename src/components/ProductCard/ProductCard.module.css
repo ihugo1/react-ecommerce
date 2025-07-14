@@ -27,6 +27,7 @@
     .price{
       width: 25%;
       text-align: right;
+      color: var(--accent-color);
     }
   }
 }

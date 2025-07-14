@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-lg);
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   .logo{
     display: flex;
     font-size: var(--font-md);
