@@ -1,0 +1,18 @@
+.featuredProducts{
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--spacing-xxl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+  background-color: var(--background-color-light);
+  .title{
+    color: var(--white-text-color);
+    text-align: center;
+  }
+  .productsContainer{
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+  }
+}

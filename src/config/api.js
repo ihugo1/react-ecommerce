@@ -1,0 +1,3 @@
+export const BASE_URL = "https://bfqflgibrppqywfriryv.supabase.co/rest/v1/";
+export const API_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmcWZsZ2licnBwcXl3ZnJpcnl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg4OTAxMjUsImV4cCI6MjA2NDQ2NjEyNX0.fVclJf8q4ayoHfaLbSYje8w2NH_tnN8-yjZKxmSlF6s";
