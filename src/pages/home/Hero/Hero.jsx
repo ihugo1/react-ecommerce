@@ -1,19 +1,17 @@
-import React from 'react'
+import React from "react";
 import styles from "./Hero.module.css";
-import background from "../../../assets/images/hero/hero.jpg";
+import video from "../../../assets/videos/hero/herovideo.mp4";
 
 export const Hero = () => {
   return (
     <div className={styles.hero}>
-
       <div className={styles.backgroundContainer}>
-        <img src={background}/>
+        <video autoPlay muted loop playsInline src={video} />
       </div>
 
       <div className={styles.content}>
         <p>YOUR CLOSET, YOUR ATTITUDE</p>
       </div>
-
     </div>
-  )
-}
+  );
+};

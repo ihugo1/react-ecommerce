@@ -9,7 +9,16 @@
   padding: var(--spacing-lg);
   transition: background-color 0.3s ease-in-out;
   .logo{
-    color: white;
+    display: flex;
+    font-size: var(--font-md);
+    .a{
+      color: var(--white-text-color);
+      font-weight: 800;
+    }
+    .b{
+      color: var(--accent-color);
+      font-weight: 600;
+    }
   }
   .navButtons{
     display: flex;

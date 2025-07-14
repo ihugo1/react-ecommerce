@@ -17,8 +17,8 @@ export const Navbar = () => {
     ${styles.navbar} ${(location.pathname!=="/" || isMenuOpen) ? styles.solid : styles.transparent}
     `}>
       <div className={styles.logo}>
-        <p>Pretty</p>
-        <p>Prink</p>
+        <p className={styles.a}>PRETTY</p>
+        <p className={styles.b}>PINK</p>
       </div>
 
       <div className={styles.navButtons}>
