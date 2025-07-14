@@ -1,0 +1,41 @@
+.navbar{
+  position: fixed;
+  z-index: 1000;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  transition: background-color 0.3s ease-in-out;
+  .logo{
+    color: white;
+  }
+  .navButtons{
+    display: flex;
+    padding: var(--spacing-xs);
+    gap: var(--spacing-xs);
+    button{
+      height: 3rem;
+      width: 3rem;
+      border: none;
+      font-size: var(--font-lg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--white-text-color);
+      background-color: transparent;
+    }
+    button:hover{
+      cursor: pointer;
+      color: var(--accent-color);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+.solid{
+  background-color: var(--background-color);
+}
+.transparent{
+  background-color: transparent;
+}

@@ -1,0 +1,23 @@
+.hero{
+  width: 100%;
+  height: 100vh;
+  .backgroundContainer{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(34, 0, 21, 0.5);
+  }
+}
