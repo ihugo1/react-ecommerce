@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu } from "./Menu/Menu";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
@@ -16,10 +16,10 @@ export const Navbar = () => {
     <div className={`
     ${styles.navbar} ${(location.pathname!=="/" || isMenuOpen) ? styles.solid : styles.transparent}
     `}>
-      <div className={styles.logo}>
+      <Link className={styles.logo} to="/">
         <p className={styles.a}>PRETTY</p>
         <p className={styles.b}>PINK</p>
-      </div>
+      </Link>
 
       <div className={styles.navButtons}>
         <button>

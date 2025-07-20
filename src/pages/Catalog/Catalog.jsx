@@ -4,6 +4,7 @@ import { Filter } from "./Filter/Filter";
 import { Grid } from "./Grid/Grid";
 import { useProducts } from "../../hooks/useProducts";
 import { DataStateHandler } from "../../components/DataStateHandler/DataStateHandler";
+import { FeaturedProducts } from "../../components/FeaturedProducts/FeaturedProducts";
 
 export const Catalog = () => {
   const [seletedCategoryId, setSelectedCategoryId] = useState(null);
@@ -22,6 +23,7 @@ export const Catalog = () => {
         dataType={"products"}
         renderData={(data) => <Grid products={data} />}
       />
+      <FeaturedProducts />
     </div>
   );
 };

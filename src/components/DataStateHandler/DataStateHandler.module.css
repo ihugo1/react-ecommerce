@@ -8,6 +8,7 @@
   gap: var(--spacing-lg);
   font-size: var(--font-xl);
   color: var(--white-text-color);
+  background-color: var(--background-color-light);
   .spinner {
     width: 40px;
     height: 40px;

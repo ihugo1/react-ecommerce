@@ -32,6 +32,7 @@
     .productsContainer {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: var(--spacing-xl);
       @media (max-width: 768px) {
         flex-direction: column;
