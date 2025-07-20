@@ -1,0 +1,10 @@
+.grid{
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* espacio entre tarjetas */
+  justify-content: center;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,33 @@
+.filter {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  p {
+    font-size: var(--font-md);
+    color: var(--white-text-color);
+  }
+  .filterButtons {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    @media (max-width: 768px) {
+      justify-content: space-evenly;
+    }
+    .categoryButton {
+      width: 100px;
+      height: 40px;
+      background-color: transparent;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      font-size: var(--font-md);
+      text-transform: capitalize;
+    }
+    .selected {
+      background-color: var(--accent-color);
+      color: var(--white-text-color);
+    }
+  }
+}

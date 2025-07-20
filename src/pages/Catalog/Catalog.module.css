@@ -1,0 +1,10 @@
+.catalog {
+  margin-top: 10vh;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  gap: var(--spacing-xl);
+  background-color: var(--background-color-light);
+}
