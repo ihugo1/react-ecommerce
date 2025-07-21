@@ -20,20 +20,14 @@ export const DataStateHandler = ({ data, loading, error, dataType="data", render
     );
   }
 
-  if (data.length === 0) {
+  const isEmptyArray = Array.isArray(data) && data.length === 0;
+  const isEmptyObject = !Array.isArray(data) && !data;
+
+  if (isEmptyArray || isEmptyObject) {
     return (
       <div className={styles.feedbackMessage}>
         <FaGhost />
         <p>No {dataType} found.</p>
-      </div>
-    );
-  }
-
-  if (!data) {
-    return (
-      <div className={styles.feedbackMessage}>
-        <FaGhost />
-        <p>No {dataType} available</p>
       </div>
     );
   }

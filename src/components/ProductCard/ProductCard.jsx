@@ -1,8 +1,9 @@
 import styles from "./ProductCard.module.css";
+import { Link } from "react-router-dom";
 
 export const ProductCard = ({ product }) => {
   return (
-    <div className={styles.productCard}>
+    <Link to={`/product/${product.id}`} className={styles.productCard}>
       <div className={styles.imageContainer}>
         <img src={product.main_image_url} alt={product.name} />
       </div>
@@ -10,6 +11,6 @@ export const ProductCard = ({ product }) => {
         <p className={styles.name}>{product.name}</p>
         <p className={styles.price}>${product.price}</p>
       </div>
-    </div>
+    </Link>
   );
 };

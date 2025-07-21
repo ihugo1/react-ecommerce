@@ -1,0 +1,12 @@
+.product {
+  position: relative;
+  padding: var(--spacing-lg);
+  padding-top: 10vh;
+  height: auto;
+  display: flex;
+  background-color: var(--background-color-light);
+  @media (max-width: 768px){
+    height: auto;
+    flex-direction: column;
+  }
+}

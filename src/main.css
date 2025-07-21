@@ -11,6 +11,7 @@
   font-family: "Montserrat", sans-serif;
   list-style: none;
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
 }
 html.menu-open {
   overflow-y: hidden;
