@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchProducts } from "../api/productsService";
+import { getProductsByCategory } from "../api/productsService";
 
 // Gets an array with all products by default unless a category and/or limit is given
 
@@ -12,7 +12,7 @@ export const useProducts = (categoryId=null, resultLimit=null) => {
     setLoading(true);
     setError(false);
     try {
-      const data = await fetchProducts(categoryId, resultLimit);
+      const data = await getProductsByCategory(categoryId, resultLimit);
       setProducts(data);
     } catch (err) {
       setError(err.message);

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchProduct } from "../api/productService";
+import { getProductById } from "../api/productsService";
 
 // Gets a product by its ID
 
@@ -12,7 +12,7 @@ export const useProduct = (productId) => {
     setLoading(true);
     setError(false);
     try {
-      const data = await fetchProduct(productId);
+      const data = await getProductById(productId);
       setProduct(data[0]);
     } catch (err) {
       setError(err.message);

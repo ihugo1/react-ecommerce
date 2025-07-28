@@ -1,9 +1,11 @@
 import styles from "./Info.module.css";
 import { useState } from "react";
 import { Button } from "../../../components/Button/Button";
+import { useCart } from "../../../context/cartContext";
 
 export const Info = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState(null);
+  const { addToCart } = useCart();
 
   return (
     <div className={styles.info}>
@@ -29,7 +31,7 @@ export const Info = ({ product }) => {
           ))}
         </div>
       </div>
-      <Button label={"Add to cart"} />
+      <Button label={"Add to cart"} onClick={()=>addToCart(product, selectedSize)}/>
     </div>
   );
 };
