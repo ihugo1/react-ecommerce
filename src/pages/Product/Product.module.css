@@ -1,11 +1,12 @@
 .product {
   position: relative;
+  background-color: rgba(245, 245, 245, 0.2);
   .content {
-  padding: var(--spacing-lg);
-  padding-top: 10vh;
-  height: auto;
-  width: 100%;
-  display: flex;
+    padding: var(--spacing-lg);
+    padding-top: 10vh;
+    height: auto;
+    width: 100%;
+    display: flex;
     @media (max-width: 768px) {
       height: auto;
       flex-direction: column;

@@ -2,6 +2,7 @@ import styles from "./Hero.module.css";
 import { Button } from "../../../components/Button/Button";
 import { FaBagShopping } from "react-icons/fa6";
 import video from "../../../assets/videos/hero/herovideo.mp4";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -20,7 +21,7 @@ export const Hero = () => {
           exclusive collection. 
           Shop now and express yourself with confidence!
         </p>
-        <Button icon={<FaBagShopping/>} label="Go to catalog"/>
+        <Link to={"/catalog"} className={styles.catalogButton}>Go to catalog</Link>
       </div>
     </div>
   );

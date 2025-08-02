@@ -60,15 +60,16 @@
           justify-content: center;
           align-items: center;
           background-color: var(--white-text-color);
-          color: var(--accent-color);
-          border-radius: var(--border-radius);
-          border: 2px solid var(--accent-color);
+          color: rgb(182, 182, 182);
+          border-radius: 100%;
+          border: 2px solid rgb(182, 182, 182);
           transition: all 0.2s ease;
         }
         input:checked + .sizeLabel {
+          border: 2px solid var(--accent-color);
           background-color: var(--accent-color);
           color: var(--white-text-color);
-          border-radius: 8px;
+          border-radius: 100%;
           font-weight: 600;
         }
         .sizeLabel:hover {

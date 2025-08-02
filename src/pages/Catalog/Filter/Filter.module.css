@@ -30,5 +30,8 @@
       background-color: var(--accent-color);
       color: var(--white-text-color);
     }
+    .categoryButton:hover{
+      cursor: pointer;
+    }
   }
 }
