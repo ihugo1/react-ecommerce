@@ -18,16 +18,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     color: var(--white-text-color);
     .name{
       width: 75%;
       text-align: left;
+            font-size: 0.8rem;
     }
     .price{
       width: 25%;
       text-align: right;
+      font-size: 1.2rem;
       color: var(--accent-color);
+    }
+  }
+}
+.productCard:hover{
+  .infoContainer{
+    .name{
+      color: var(--accent-color);
+    }
+    .price{
+      color: var(--white-text-color);
     }
   }
 }

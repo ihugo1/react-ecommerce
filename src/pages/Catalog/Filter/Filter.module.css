@@ -5,7 +5,6 @@
   flex-direction: column;
   gap: var(--spacing-md);
   padding: var(--spacing-md);
-  background-color: var(--background-color-light);
   p {
     font-size: var(--font-md);
     color: var(--black-text-color);

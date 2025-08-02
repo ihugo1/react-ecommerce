@@ -1,4 +1,5 @@
 import styles from "./Catalog.module.css";
+import background from "../../assets/images/catalog/background.jpg";
 import { useState } from "react";
 import { Filter } from "./Filter/Filter";
 import { Grid } from "./Grid/Grid";
@@ -12,6 +13,10 @@ export const Catalog = () => {
 
   return (
     <div className={styles.catalog}>
+      <div className={styles.background}>
+        <img src={background}/>
+      </div>
+      <div className={styles.content}>
       <Filter
         selectedCategoryId={seletedCategoryId}
         setSelectedCategoryId={setSelectedCategoryId}
@@ -24,6 +29,7 @@ export const Catalog = () => {
         renderData={(data) => <Grid products={data} />}
       />
       <FeaturedProducts />
+      </div>
     </div>
   );
 };

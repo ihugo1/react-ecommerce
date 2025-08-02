@@ -1,6 +1,6 @@
 .feedbackMessage {
   width: 100%;
-  min-height: 50vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,6 @@
   gap: var(--spacing-lg);
   font-size: var(--font-xl);
   color: var(--white-text-color);
-  background-color: var(--background-color-light);
   .spinner {
     width: 40px;
     height: 40px;
