@@ -26,6 +26,7 @@
     padding: var(--spacing-xs);
     gap: var(--spacing-xs);
     button{
+      position: relative;
       height: 3rem;
       width: 3rem;
       border: none;
@@ -35,6 +36,19 @@
       align-items: center;
       color: var(--white-text-color);
       background-color: transparent;
+      .totalProducts{
+        top: 0;
+        right: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 20px;
+        position: absolute;
+        background-color: red;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
     button:hover{
       cursor: pointer;
