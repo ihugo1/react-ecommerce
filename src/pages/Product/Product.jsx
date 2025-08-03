@@ -6,6 +6,7 @@ import { DataStateHandler } from "../../components/DataStateHandler/DataStateHan
 import { Gallery } from "./Gallery/Gallery";
 import { ImageModal } from "./ImageModal/ImageModal";
 import { Info } from "./Info/Info";
+import { FeaturedProducts } from "../../components/FeaturedProducts/FeaturedProducts";
 import { useState } from "react";
 
 export const Product = () => {
@@ -42,6 +43,7 @@ export const Product = () => {
           <ImageModal imageUrl={modalImageUrl} onClose={closeModal} />
         )}
       </div>
+      <FeaturedProducts/>
     </div>
   );
 };

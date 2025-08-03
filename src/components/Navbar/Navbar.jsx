@@ -17,6 +17,11 @@ export const Navbar = () => {
   const handleToggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const handleToggleCart = () => setIsCartOpen(!isCartOpen);
 
+  useEffect(()=>{
+    setIsCartOpen(false);
+    setIsMenuOpen(false);
+  }, [location])
+
   return (
     <div
       className={`

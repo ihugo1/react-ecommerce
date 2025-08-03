@@ -11,13 +11,11 @@ export const Info = ({ product }) => {
     <div className={styles.info}>
       <h3 className={styles.name}>{product.name}</h3>
       <p className={styles.price}>$ {product.price}</p>
-      {
-        product.info ? (
-          <p className={styles.description}>{product.description}</p>
-        ) : (
-          <p className={styles.description}>No description availabled</p>
-        )
-      }
+      {product.info ? (
+        <p className={styles.description}>{product.description}</p>
+      ) : (
+        <p className={styles.description}>No description availabled</p>
+      )}
       <div className={styles.sizesContainer}>
         <p>Available Sizes</p>
         <div className={styles.sizes}>
@@ -34,10 +32,13 @@ export const Info = ({ product }) => {
                 />
                 <p className={styles.sizeLabel}>{size}</p>
               </label>
-          ))}
+            ))}
         </div>
       </div>
-      <Button label={"Add to cart"} onClick={()=>addToCart(product, selectedSize)}/>
+      <Button
+        label={"Add to cart"}
+        onClick={() => addToCart(product, selectedSize)}
+      />
     </div>
   );
 };

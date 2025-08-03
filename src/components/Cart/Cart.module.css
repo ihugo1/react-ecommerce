@@ -85,7 +85,10 @@
         justify-content: center;
         align-items: center;
         font-size: var(--font-lg);
-        color: rgb(177, 44, 44);
+        color: var(--red-color);
+      }
+      .removeButton:hover{
+        cursor: pointer;
       }
     }
   }
