@@ -1,6 +1,6 @@
 import styles from "./Social.module.css";
-import socialLinksBackground from "../../../assets/images/social/mike-von-dwvtsZsyTZw-unsplash.jpg";
-import emailFromBackground from "../../../assets/images/social/bui-hoang-long-Y92m8Ahw7Rg-unsplash.jpg";
+import socialLinksBackground from "../../../assets/images/social/mike-von-dwvtsZsyTZw-unsplash.webp";
+import emailFromBackground from "../../../assets/images/social/bui-hoang-long-Y92m8Ahw7Rg-unsplash.webp";
 import { FaInstagram, FaPinterest, FaYoutube } from "react-icons/fa6";
 import { Button } from "../../../components/Button/Button";
 
