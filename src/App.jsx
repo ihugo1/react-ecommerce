@@ -8,7 +8,7 @@ import { Product } from "./pages/Product/Product";
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react-ecommerce">
       <ScrollToTop />
       <Navbar />
       <Routes>
