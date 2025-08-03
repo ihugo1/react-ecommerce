@@ -1,8 +1,10 @@
 import styles from "./Menu.module.css";
 import catalog from "../../../assets/images/menu/side-view-woman-looking-clothes.jpg";
+import home from "../../../assets/images/menu/home.jpg";
 import { Link } from "react-router-dom";
 
 const menuLinks = [
+  { name: "Home", path: "/", img: home},
   { name: "Catalog", path: "/catalog", img: catalog },
 ];
 
