@@ -34,7 +34,7 @@
       align-items: center;
       gap: var(--spacing-lg);
       padding: var(--spacing-lg);
-      font-size: var(--font-lg);
+      font-size: var(--font-md);
       text-align: center;
       color: var(--white-text-color);
       background-color: rgba(0, 0, 0, 0.7);
@@ -82,7 +82,7 @@
       align-items: center;
       gap: var(--spacing-lg);
       padding: var(--spacing-lg);
-      font-size: var(--font-lg);
+      font-size: var(--font-md);
       text-align: center;
       color: var(--white-text-color);
       background-color: rgba(0, 0, 0, 0.6);

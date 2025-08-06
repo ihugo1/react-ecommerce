@@ -1,6 +1,6 @@
 import styles from "./Social.module.css";
-import socialLinksBackground from "../../../assets/images/backgrounds/mike-von-dwvtsZsyTZw-unsplash.webp";
-import emailFromBackground from "../../../assets/images/backgrounds/mike-von-wINYGcOk-Ps-unsplash.webp";
+import emailFromBackground from "../../../assets/images/backgrounds/mike-von-dwvtsZsyTZw-unsplash.webp";
+import socialLinksBackground from "../../../assets/images/backgrounds/mike-von-wINYGcOk-Ps-unsplash.webp";
 import { FaInstagram, FaPinterest, FaYoutube } from "react-icons/fa6";
 import { Button } from "../../../components/Button/Button";
 
