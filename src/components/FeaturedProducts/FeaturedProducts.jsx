@@ -1,5 +1,5 @@
 import styles from "./FeaturedProducts.module.css";
-import background from "./../../assets/images/featuredproducts/background.jpg";
+import background from "./../../assets/images/backgrounds/featuredProducts.webp";
 import { ProductCard } from "../ProductCard/ProductCard";
 import { DataStateHandler } from "../DataStateHandler/DataStateHandler";
 import { useProducts } from "../../hooks/useProducts";

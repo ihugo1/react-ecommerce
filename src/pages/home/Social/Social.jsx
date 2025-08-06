@@ -1,6 +1,6 @@
 import styles from "./Social.module.css";
-import socialLinksBackground from "../../../assets/images/social/mike-von-dwvtsZsyTZw-unsplash.webp";
-import emailFromBackground from "../../../assets/images/social/bui-hoang-long-Y92m8Ahw7Rg-unsplash.webp";
+import socialLinksBackground from "../../../assets/images/backgrounds/mike-von-dwvtsZsyTZw-unsplash.webp";
+import emailFromBackground from "../../../assets/images/backgrounds/mike-von-wINYGcOk-Ps-unsplash.webp";
 import { FaInstagram, FaPinterest, FaYoutube } from "react-icons/fa6";
 import { Button } from "../../../components/Button/Button";
 
@@ -41,7 +41,12 @@ export const Social = () => {
 
       <form className={styles.emailForm}>
         <div className={styles.backgroundContainer}>
-          <img src={emailFromBackground}/>
+          <img
+            src={emailFromBackground}
+            width={800} // Ancho explícito
+            height={400} // Alto explícito
+            loading="lazy" // Carga diferida
+          />
         </div>
 
         <div className={styles.content}>
@@ -52,7 +57,7 @@ export const Social = () => {
               placeholder="Enter your email"
               className={styles.emailInput}
             />
-            <Button label="Register"/>
+            <Button label="Register" />
             <p className={styles.privacyPolicy}>
               By subscribing, you confirm that you have read the{" "}
               <p>Privace Polity</p>
