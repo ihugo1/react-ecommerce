@@ -26,7 +26,7 @@ export const Cart = ({ isOpen, closeCart }) => {
         </div>
         <div className={styles.productList}>
           {cartProducts.map((cartProduct) => (
-            <div className={styles.product}>
+            <div className={styles.product} key={cartProduct.cartId}>
               <div className={styles.productImgContainer}>
                 <img src={cartProduct.product.main_image_url} />
               </div>

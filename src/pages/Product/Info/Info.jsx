@@ -11,11 +11,7 @@ export const Info = ({ product }) => {
     <div className={styles.info}>
       <h3 className={styles.name}>{product.name}</h3>
       <p className={styles.price}>$ {product.price}</p>
-      {product.info ? (
-        <p className={styles.description}>{product.description}</p>
-      ) : (
-        <p className={styles.description}>No description availabled</p>
-      )}
+      <p className={styles.description}>{product.description}</p>
       <div className={styles.sizesContainer}>
         <p>Available Sizes</p>
         <div className={styles.sizes}>
