@@ -8,7 +8,7 @@ export const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.backgroundContainer}>
-        <video autoPlay muted loop playsInline src={video} />
+        <video autoPlay muted loop playsInline preload="metadata" src={video} />
       </div>
 
       <div className={styles.content}>
