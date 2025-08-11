@@ -9,7 +9,7 @@ export const ProductCard = ({ product }) => {
       </div>
       <div className={styles.infoContainer}>
         <p className={styles.name}>{product.name}</p>
-        <p className={styles.price}>${product.price}</p>
+        <p className={styles.price}>${parseFloat(product.price).toFixed(2)}</p>
       </div>
     </Link>
   );

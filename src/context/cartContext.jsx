@@ -13,7 +13,7 @@ export const CartProvider = ({ children }) => {
   const cartTotal = useMemo(() => {
     return cartProducts.reduce((total, item) => {
       return total + (item.product.price || 0);
-    }, 0);
+    }, 0).toFixed(2);
   }, [cartProducts]);
 
   useEffect(() => {

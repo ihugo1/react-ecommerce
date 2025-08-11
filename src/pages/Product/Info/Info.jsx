@@ -10,7 +10,7 @@ export const Info = ({ product }) => {
   return (
     <div className={styles.info}>
       <h3 className={styles.name}>{product.name}</h3>
-      <p className={styles.price}>$ {product.price}</p>
+      <p className={styles.price}>$ {parseFloat(product.price).toFixed(2)}</p>
       <p className={styles.description}>{product.description}</p>
       <div className={styles.sizesContainer}>
         <p>Available Sizes</p>

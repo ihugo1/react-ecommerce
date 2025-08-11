@@ -32,7 +32,7 @@ export const Cart = ({ isOpen, closeCart }) => {
               </div>
               <div className={styles.productInfoContainer}>
                 <div className={styles.price}>
-                  $ {cartProduct.product.price}
+                  $ {parseFloat(cartProduct.product.price).toFixed(2)}
                 </div>
                 <div className={styles.name}>{cartProduct.product.name}</div>
                 <div className={styles.size}>{cartProduct.size}</div>
