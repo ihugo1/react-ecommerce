@@ -6,6 +6,7 @@ import { Home } from "./pages/home/Home";
 import { Catalog } from "./pages/Catalog/Catalog";
 import { Footer } from "./components/Footer/Footer";
 import { Product } from "./pages/Product/Product";
+import { About } from "./pages/About/About";
 
 const AppContent = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </>

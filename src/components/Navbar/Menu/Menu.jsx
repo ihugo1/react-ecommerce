@@ -1,11 +1,13 @@
 import styles from "./Menu.module.css";
 import home from "../../../assets/images/menu-links/sven-mieke-DRZ1Pajkow4-unsplash.webp"
 import catalog from "../../../assets/images/menu-links/shanna-camilleri-ljNQxfyN7AM-unsplash.webp";
+import about from "../../../assets/images/menu-links/ceyda-ciftci-LpPJWPJoHtQ-unsplash.jpg";
 import { useNavigate } from "react-router-dom";
 
 const menuLinks = [
   { name: "Home", path: "/", img: home},
-  { name: "Catalog", path: "/catalog", img: catalog }
+  { name: "Catalog", path: "/catalog", img: catalog },
+  { name: "About this site", path: "/about", img: about }
 ];
 
 export const Menu = ({ isOpen }) => {
