@@ -43,3 +43,6 @@
     align-items: center;
   }
 }
+.imageModal:hover{
+  cursor: pointer;
+}

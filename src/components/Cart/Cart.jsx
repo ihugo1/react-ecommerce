@@ -4,9 +4,16 @@ import { Button } from "../Button/Button";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 import { FaTrashCan } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 export const Cart = ({ isOpen, closeCart }) => {
   const { cartProducts, removeFromCart, cartTotal, emptyCart } = useCart();
+  const navigate = useNavigate();
+
+  const handleBuyCart = () => {
+    closeCart();
+    navigate('/payment');
+  };
 
   return (
     <>
@@ -35,7 +42,7 @@ export const Cart = ({ isOpen, closeCart }) => {
                   $ {parseFloat(cartProduct.product.price).toFixed(2)}
                 </div>
                 <div className={styles.name}>{cartProduct.product.name}</div>
-                <div className={styles.size}>{cartProduct.size}</div>
+                <div className={styles.size}>SIZE: {cartProduct.size}</div>
               </div>
               <button
                 className={styles.removeButton}
@@ -47,10 +54,13 @@ export const Cart = ({ isOpen, closeCart }) => {
           ))}
         </div>
         <div className={styles.cartFooter}>
-          <p>${cartTotal}</p>
+          <div className={styles.cartTotalContainer}>
+            <p className={styles.cartTotalLabel}>Cart total:</p>
+            <p className={styles.cartTotalAmmount}>${cartTotal}</p>
+          </div>
           <div className={styles.cartButtons}>
             <Button label={"EMPTY CART"} onClick={() => emptyCart()} />
-            <Button label={"BUY CART"} />
+            <Button label={"BUY CART"} onClick={handleBuyCart} />
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { FaX } from "react-icons/fa6";
 
 export const ImageModal = ({ imageUrl, onClose }) => {
   return (
-    <div className={styles.imageModal}>
+    <div className={styles.imageModal} onClick={()=>onClose()}>
       <div className={styles.imageContainer}>
         <img src={imageUrl} />
       </div>

@@ -11,6 +11,7 @@ import { useCart } from "../../context/cartContext";
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { cartProducts } = useCart();
   const location = useLocation();
 
@@ -22,11 +23,24 @@ export const Navbar = () => {
     setIsMenuOpen(false);
   }, [location])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (location.pathname === "/") {
+        setIsScrolled(window.scrollY > 50);
+      }
+    };
+
+    if (location.pathname === "/") {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [location.pathname]);
+
   return (
     <div
       className={`
     ${styles.navbar} ${
-        location.pathname !== "/" || isMenuOpen
+        location.pathname !== "/" || isMenuOpen || isScrolled
           ? styles.solid
           : styles.transparent
       }

@@ -7,6 +7,7 @@ import { Catalog } from "./pages/Catalog/Catalog";
 import { Footer } from "./components/Footer/Footer";
 import { Product } from "./pages/Product/Product";
 import { About } from "./pages/About/About";
+import { Payment } from "./pages/Payment/Payment";
 
 const AppContent = () => {
   const location = useLocation();
@@ -16,6 +17,8 @@ const AppContent = () => {
       "/": "PrettyPink",
       "/catalog": "Catalog",
       "/product": "Product",
+      "/payment": "Payment",
+      "/about": "About",
     };
     const path = location.pathname.startsWith("/product")
       ? "/product"
@@ -32,6 +35,7 @@ const AppContent = () => {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/about" element={<About />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
       <Footer />
     </>

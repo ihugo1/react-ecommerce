@@ -17,33 +17,35 @@ export const Product = () => {
   const closeModal = () => setModalImageUrl(null);
 
   return (
-    <div className={styles.product}>
-      <div className={styles.background}>
-        <img src={background} />
-      </div>
-      <div className={styles.content}>
-        <DataStateHandler
-          data={product}
-          loading={loading}
-          error={error}
-          dataType="product"
-          renderData={(data) => (
-            <>
-              <Gallery
-                mainImageUrl={product.main_image_url}
-                images={product.images_urls}
-                onImageClick={(url) => setModalImageUrl(url)}
-              />
-              <Info product={product} />
-            </>
-          )}
-        />
+    <>
+      <div className={styles.product}>
+        <div className={styles.background}>
+          <img src={background} />
+        </div>
+        <div className={styles.content}>
+          <DataStateHandler
+            data={product}
+            loading={loading}
+            error={error}
+            dataType="product"
+            renderData={(data) => (
+              <>
+                <Gallery
+                  mainImageUrl={product.main_image_url}
+                  images={product.images_urls}
+                  onImageClick={(url) => setModalImageUrl(url)}
+                />
+                <Info product={product} />
+              </>
+            )}
+          />
 
-        {modalImageUrl && (
-          <ImageModal imageUrl={modalImageUrl} onClose={closeModal} />
-        )}
+          {modalImageUrl && (
+            <ImageModal imageUrl={modalImageUrl} onClose={closeModal} />
+          )}
+        </div>
       </div>
-      <FeaturedProducts/>
-    </div>
+      <FeaturedProducts />
+    </>
   );
 };

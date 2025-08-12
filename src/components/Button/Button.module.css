@@ -1,7 +1,9 @@
 .button{
-  padding: var(--spacing-sm) var(--spacing-lg);
+  width: 150px;
+  padding: var(--spacing-sm);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-sm);
   font-size: var(--font-md);
   background-color: var(--accent-color);

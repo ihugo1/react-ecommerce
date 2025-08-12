@@ -10,21 +10,24 @@ export const FeaturedProducts = () => {
   return (
     <div className={styles.featuredProducts}>
       <div className={styles.background}>
-        <img src={background}/>
+        <img src={background} />
       </div>
       <div className={styles.content}>
-        <h2 className={styles.title}>Featured Products</h2>
+        <div className={styles.header}>
+          <h2 className={styles.title}>Featured Products</h2>
+          <h3 className={styles.subtitle}>Check our top pics</h3>
+        </div>
         <div className={styles.productsContainer}>
           <DataStateHandler
             data={products}
             loading={loading}
             error={error}
             dataType="products"
-            renderData={(data) => (
+            renderData={(data) =>
               data.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))
-            )}
+            }
           />
         </div>
       </div>
