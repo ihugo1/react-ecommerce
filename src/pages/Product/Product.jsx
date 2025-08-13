@@ -45,7 +45,11 @@ export const Product = () => {
           )}
         </div>
       </div>
-      <FeaturedProducts />
+      <FeaturedProducts
+        title="Best Sellers"
+        subtitle="Discover our most popular products loved by customers."
+        sortBy="bestsellers"
+      />
     </>
   );
 };

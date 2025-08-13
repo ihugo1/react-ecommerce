@@ -3,14 +3,16 @@ import { BASE_URL, API_KEY } from "../config/api";
 // Fetch products by Category and limit
 // This will get the first 10 products of all categories by default
 
-export const getProductsByCategory = async (categoryId, resultLimit, offset) => {
+export const getProductsByCategory = async (categoryId, resultLimit, offset, sortBy = "newest") => {
   const params = new URLSearchParams();
 
   if (categoryId) params.append("category_id", `eq.${categoryId}`);
   params.append("limit", resultLimit+1);
   params.append("offset", offset);
   params.append("select", "*");
-  params.append("order", "created_at.desc");
+  
+  const orderBy = sortBy === "bestsellers" ? "sales_count.desc" : "created_at.desc";
+  params.append("order", orderBy);
 
   const url = `${BASE_URL}products?${params}`;
   const response = await fetch(url, {

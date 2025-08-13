@@ -36,7 +36,11 @@ export const Catalog = () => {
             onClick={loadMoreProducts}
           />
         )}
-        <FeaturedProducts />
+        <FeaturedProducts
+          title="Best Sellers"
+          subtitle="Discover our most popular products loved by customers."
+          sortBy="bestsellers"
+        />
       </div>
     </div>
   );

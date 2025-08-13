@@ -12,16 +12,24 @@ export const Hero = () => {
       </div>
 
       <div className={styles.content}>
-        <div className={styles.slogan}>
-          <p className={styles.white}>THIS IS YOUR CLOSET</p>
-          <p className={styles.accent}>THIS IS YOUR ATTITUDE</p>
+        <div className={styles.heroText}>
+          <div className={styles.slogan}>
+            <p className={styles.white}>FASHION THAT SPEAKS</p>
+            <p className={styles.accent}>YOUR LANGUAGE</p>
+          </div>
+          <div className={styles.divider}></div>
+          <p className={styles.paragraph}>
+            Discover the latest trends in fashion and elevate your style with our
+            exclusive collection. 
+            Shop now and express yourself with confidence!
+          </p>
         </div>
-        <p className={styles.paragraph}>
-          Discover the latest trends in fashion and elevate your style with our
-          exclusive collection. 
-          Shop now and express yourself with confidence!
-        </p>
-        <Link to={"/catalog"} className={styles.catalogButton}>Go to catalog</Link>
+        <div className={styles.buttonContainer}>
+          <Link to={"/catalog"} className={styles.catalogButton}>
+            <FaBagShopping />
+            Shop Now
+          </Link>
+        </div>
       </div>
     </div>
   );

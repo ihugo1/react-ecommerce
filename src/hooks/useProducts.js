@@ -3,7 +3,7 @@ import { getProductsByCategory } from "../api/productsService";
 
 // Gets an array with all products by default unless a category and/or limit is given
 
-export const useProducts = (categoryId = null, resultLimit = 3) => {
+export const useProducts = (categoryId = null, resultLimit = 9, sortBy = "newest") => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -15,7 +15,7 @@ export const useProducts = (categoryId = null, resultLimit = 3) => {
     setLoadingMore(true);
     setError(null);
     try {
-      const { products: newData, hasMore} = await getProductsByCategory(categoryId, resultLimit, offset);
+      const { products: newData, hasMore} = await getProductsByCategory(categoryId, resultLimit, offset, sortBy);
       setProducts((prev) => [...prev, ...newData]);
       setOffset(prev => prev + resultLimit);
       setHasMore(hasMore);
@@ -32,7 +32,7 @@ export const useProducts = (categoryId = null, resultLimit = 3) => {
     setProducts([]);
     setOffset(0);
     try {
-      const { products: data, hasMore } = await getProductsByCategory(categoryId, resultLimit, 0);
+      const { products: data, hasMore } = await getProductsByCategory(categoryId, resultLimit, 0, sortBy);
       setProducts(data);
       setHasMore(hasMore);
       setOffset(resultLimit);
@@ -45,7 +45,7 @@ export const useProducts = (categoryId = null, resultLimit = 3) => {
 
   useEffect(() => {
     getProducts();
-  }, [categoryId, resultLimit]);
+  }, [categoryId, resultLimit, sortBy]);
 
   return { products, loading, error, loadMoreProducts, loadingMore, hasMore };
 };
